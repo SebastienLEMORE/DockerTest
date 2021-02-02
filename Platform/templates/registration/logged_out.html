@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Logout!{% endblock %}
+
+{% block body %}
+<div class="container p-3 d-flex justify-content-center align-items-center">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Déconnexion</h5>
+      <p class="card-text">Vous avez été déconnecté avec succès.</p>
+      <div class="text-center">
+        <a href="{% url 'login' %}" class="card-link">Reconnexion</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

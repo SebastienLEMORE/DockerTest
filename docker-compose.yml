@@ -1,0 +1,21 @@
+ version: "3.7"
+
+ services:
+  django:
+    build: .
+    environment:
+      MYENV: EXAMPLE
+    volumes:
+      - .:/app
+
+  django_migrate:
+    extends:
+      service: django
+    command: python manage.py migrate
+
+  django_run:
+    extends:
+      service: django
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
