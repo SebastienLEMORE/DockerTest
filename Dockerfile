@@ -5,4 +5,3 @@ RUN pip install pipenv
 COPY Pipfile* /app/
 RUN cd /app && pipenv lock --keep-outdated --requirements > requirements.txt
 RUN pip install -r /app/requirements.txt
-COPY . /app/

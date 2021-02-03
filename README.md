@@ -1,5 +1,8 @@
 ## Run server with docker
 
+Install dependencies node for fastest start :
+`cd frontend/ && npm install`
+
 If you want to build docker image before :
 `docker-compose build`
 
