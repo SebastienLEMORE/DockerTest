@@ -1,9 +1,9 @@
 ## Run server with docker
 
-If you want to uild docker image before :
+If you want to build docker image before :
 `docker-compose build`
 
-Or start web server directly (wait for npm install, only react version) :
+Or start web server/build directly (wait for npm install, only react version) :
 `docker-compose up -d`
 
 Go To [http://0.0.0.0:8000](http://0.0.0.0:8000) for django version.
