@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_bundle from webpack_loader %}
+
+{% block head_title %}DockerTest React{% endblock%}
+{% block body %}
+  <div id="root"></div>
+{% endblock body %}
+
+{% block javascript %}
+  {% render_bundle 'main' %}
+  <script type="text/javascript">
+    const token = '{{csrf_token}}';
+  </script
+{% endblock javascript %}

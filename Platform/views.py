@@ -7,4 +7,5 @@ from django.contrib.auth.decorators import login_required
 class UserView(TemplateView):
     template_name = "index.html"
 
+
   

@@ -5,12 +5,12 @@ from rest_framework.response import Response
 from .serializers import UserSerializer
 
 class UserViewSet(viewsets.ViewSet):
-    queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
     
     def list(self, request):
-        serializer = self.serializer_class(self.queryset, many=True)
+        users = User.objects.all()
+        serializer = self.serializer_class(users, many=True)
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
@@ -23,6 +23,7 @@ class UserViewSet(viewsets.ViewSet):
         serializer = self.serializer_class(instance=user, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
+        user = User.objects.get(id=pk)
         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
     
     

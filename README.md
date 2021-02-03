@@ -3,10 +3,11 @@
 If you want to uild docker image before :
 `docker-compose build`
 
-Or start web server directly :
+Or start web server directly (wait for npm install, only react version) :
 `docker-compose up -d`
 
-Go To [http://127.0.0.1:3000](http://0.0.0.0:8000).
+Go To [http://0.0.0.0:8000](http://0.0.0.0:8000) for django version.
+Go To [http://0.0.0.0:8000/react](http://0.0.0.0:8000/react) for react version (don't forget to wait install).
 
 Username : `itasuke`
 

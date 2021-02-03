@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Platform',
     'rest_framework',
+    'corsheaders',
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +122,15 @@ USE_TZ = True
 
 # Registration
 LOGIN_REDIRECT_URL = '/'
+
+# WEPACK LOCAL
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'builds/',
+        'STATS_FILE': os.path.join(
+            str(BASE_DIR), 'frontend', 'webpack-stats.dev.json')
+    }
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
